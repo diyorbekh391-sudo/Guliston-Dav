@@ -9,6 +9,7 @@ import Stats from './components/Stats';
 import About from './components/About';
 import Faculties from './components/Faculties';
 import News from './components/News';
+import Map from './components/Map';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -17,10 +18,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
+        <News />
         <About />
         <Faculties />
-        <News />
+        <Stats />
+        <Map />
       </main>
       <Footer />
     </div>

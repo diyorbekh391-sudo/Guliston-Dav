@@ -16,27 +16,23 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Bosh sahifa', href: '#home' },
-    { name: 'Institut', href: '#about' },
-    { name: 'Statistika', href: '#stats' },
-    { name: 'Fakultetlar', href: '#faculties' },
     { name: 'Yangiliklar', href: '#news' },
+    { name: 'Institut', href: '#about' },
+    { name: 'Fakultetlar', href: '#faculties' },
+    { name: 'Statistika', href: '#stats' },
     { name: 'Bog\'lanish', href: '#contact' },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md py-4 shadow-sm`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform">
             <Landmark className="text-white w-6 h-6" />
           </div>
-          <span className={`font-serif font-bold text-xl tracking-tight transition-colors ${
-            scrolled ? 'text-secondary' : 'text-white'
-          }`}>
+          <span className="font-serif font-bold text-xl tracking-tight text-secondary">
             GDPI
           </span>
         </a>
@@ -47,16 +43,12 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-accent ${
-                scrolled ? 'text-secondary' : 'text-white/90'
-              }`}
+              className="text-sm font-medium transition-colors hover:text-accent text-secondary"
             >
               {link.name}
             </a>
           ))}
-          <button className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-            scrolled ? 'bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/20' : 'bg-white text-secondary hover:bg-white/90'
-          }`}>
+          <button className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/20">
             Shaxsiy kabinet
           </button>
         </div>
@@ -67,9 +59,9 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={scrolled ? 'text-secondary' : 'text-white'} />
+            <X className="text-secondary" />
           ) : (
-            <Menu className={scrolled ? 'text-secondary' : 'text-white'} />
+            <Menu className="text-secondary" />
           )}
         </button>
       </div>
