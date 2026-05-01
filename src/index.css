@@ -15,3 +15,31 @@
   --color-secondary: #002d5a;
   --color-accent: #d4af37; /* Gold/Academic Accent */
 }
+
+/* Dark mode overrides */
+.dark {
+  --color-zinc-50: #001a33;
+  --color-zinc-100: #00264d;
+  --color-zinc-200: #003366;
+  --color-zinc-400: #8099b3;
+  --color-zinc-500: #a1b0c2;
+  --color-zinc-600: #cbd5e1;
+  background-color: #001a35; /* Dark blue background */
+  color: #f8fafc;
+}
+
+.dark .bg-white {
+  background-color: #001a35;
+}
+
+.dark .bg-zinc-50 {
+  background-color: #002142;
+}
+
+.dark .text-zinc-600, .dark .text-zinc-500 {
+  color: #cad1d9; /* Lighter color for readability in dark mode, matching zinc-300/400 range */
+}
+
+.dark .border-zinc-100, .dark .border-zinc-200 {
+  border-color: #1e293b;
+}
